@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>APCNF – Farmer Profile – ATCHIYYAMMA NADIMINTI</title>
+  <style>
+:root{
+  --bg:#F4F7F5; --card:#FFFFFF; --text:#0F172A; --muted:#475569; --border:#E2E8F0;
+  --green:#2E7D32; --green2:#66BB6A; --amber:#F9A825; --amberBg:#FFF7E0; --chipBg:#E8F5E9;
+  --radius:18px; --shadow:0 10px 25px rgba(2, 6, 23, 0.08);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.wrap{max-width:900px;margin:0 auto;padding:18px 14px 40px}
+header{display:flex;align-items:center;gap:12px;margin:8px 0 14px}
+.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--green2),var(--green));box-shadow:0 8px 18px rgba(46,125,50,.25)}
+header h1{font-size:18px;margin:0;line-height:1.2}
+header p{margin:2px 0 0;color:var(--muted);font-size:12px}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;margin:12px 0}
+.section{padding:14px}
+.section h2{margin:0 0 10px;font-size:14px;letter-spacing:.2px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border:1px solid var(--border);border-radius:14px;background:#FBFCFD;margin:8px 0;align-items:center}
+.label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.value{font-size:13px;font-weight:650;color:var(--text);word-break:break-word;overflow-wrap:anywhere}
+.avatar{width:52px;height:52px;border-radius:50%;border:2px solid rgba(46,125,50,.25);object-fit:cover;background:#E8F5E9}
+.avatar.fallback{display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--green)}
+.hero{padding:0;background:
+  radial-gradient(1200px 600px at 10% -10%, rgba(102,187,106,0.25), transparent 60%),
+  radial-gradient(900px 500px at 110% 10%, rgba(46,125,50,0.18), transparent 55%),
+  var(--card);
+}
+.hero .section{padding:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border-radius:999px;background:var(--chipBg);border:1px solid rgba(46,125,50,.18);font-size:12px;font-weight:650}
+.dot{width:8px;height:8px;border-radius:999px;background:var(--green)}
+.kv{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.kv .item{padding:10px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.75)}
+.k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.v{font-size:13px;font-weight:700;margin-top:3px}
+.map-link{display:inline-flex;align-items:center;gap:10px;margin-top:10px;text-decoration:none;color:var(--text);border:1px solid var(--border);background:#fff;border-radius:14px;padding:10px 12px}
+.map-pill{background:var(--amberBg);border:1px solid rgba(249,168,37,.35);color:#7a4b00;font-weight:800;border-radius:999px;padding:3px 8px;font-size:11px}
+.tableWrap{overflow:auto;border:1px solid var(--border);border-radius:14px;background:#fff}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th,td{padding:10px 12px;border-bottom:1px solid var(--border);text-align:left;font-size:13px;vertical-align:top}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:#FBFCFD}
+tr:last-child td{border-bottom:none}
+.badgeLink{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--green);font-weight:750}
+.badgeLink:hover{text-decoration:underline}
+small.muted{color:var(--muted)}
+@media (max-width:700px){
+  .kv{grid-template-columns:1fr 1fr}
+  table{min-width:520px}
+}
+@media (max-width:380px){
+  .kv{grid-template-columns:1fr}
+}
+
+  /* Collapsible sections */
+  details.collapsible { margin-top: 2px; }
+  details.collapsible > summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    list-style: none;
+    padding: 4px 0;
+    user-select: none;
+  }
+  details.collapsible > summary::-webkit-details-marker { display: none; }
+  details.collapsible > summary::after {
+    content: "▾";
+    float: right;
+    opacity: 0.75;
+    transform: translateY(1px);
+  }
+  details.collapsible[open] > summary::after { content: "▴"; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo" aria-hidden="true"></div>
+    <div>
+      <h1>Andhra Pradesh Community Natural Farming</h1>
+      <p>Farmer Profile (Data version: 2026-01-16)</p>
+    </div>
+  </header>
+
+  <section class="card" id="farmer">
+    <div class="section">
+      <h2>Farmer</h2>
+
+      <div class="row">
+        <div style="display:flex;align-items:center;gap:12px">
+          <img class="avatar" src="https://ryss.ap.gov.in/gateway/urvi-app-service/api/v1/consent/attachment/bridge/ie/iconpic?ieId=103220626141406485" alt="Farmer photo" loading="lazy"/>
+          <div>
+            <div class="label">Name</div>
+            <div class="value">ATCHIYYAMMA NADIMINTI</div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="label">Location</div>
+          <div class="value">VEDURUVEDA, VEDURUVEDA, BONDAPALLE, VIZIANAGARAM, Andhra Pradesh</div>
+        </div>
+      </div>
+
+      <div class="row"><div><div class="label">Testimonial</div><div class="value"><a class="badgeLink" href="https://docs.google.com/document/d/1eBFKoZiNzCU9u6kmrsMf8_Dcm0KWouQ7/edit" target="_blank" rel="noopener">Open</a><br><small class="muted"></small></div></div></div>
+
+      <div class="row">
+        <div>
+          <div class="label">Last Updated</div>
+          <div class="value">2026-01-08 16:30:54+05:30</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="card hero" id="cropSection">
+    <div class="section">
+      <div class="chips"><span class="chip"><span class="dot"></span>Natural Farming</span><span class="chip"><span class="dot"></span>100% Chemical-Free</span><span class="chip"><span class="dot"></span>Rabi Dry Sowing</span></div>
+      <h2>Crop Overview</h2>
+      <div class="kv">
+        <div class="item"><div class="k">Primary Crop</div><div class="v">Rabi Dry Sowing</div></div>
+        <div class="item"><div class="k">Distinct Crops</div><div class="v">1</div></div>
+        <div class="item"><div class="k">Total Area (acres)</div><div class="v">1.50</div></div>
+        <div class="item"><div class="k">Crop Tiles</div><div class="v">1</div></div>
+      </div>
+      <a class="map-link" href="https://www.google.com/maps?q=18.19243621826172,83.25859832763672" target="_blank" rel="noopener"><span class="map-pill">Map</span><span>View farm location on Google Maps</span></a>
+    </div>
+  </section>
+
+
+  <section class="card" id="practices">
+    <div class="section">
+      <details open class="collapsible">
+        <summary>Practices</summary>
+      
+      <div class="row">
+        <div>
+          <div class="label">Count</div>
+          <div class="value">8</div>
+        </div>
+      </div>
+      <ul style="margin:10px 0 0;padding-left:18px"><li><span class="check">✓</span> Beejamrutham (Seed Treatment)</li><li><span class="check">✓</span> Rabi Dry Sowing</li><li><span class="check">✓</span> Bio Agents (Biological Inputs)</li><li><span class="check">✓</span> Drava Jeevamrutham Application</li><li><span class="check">✓</span> Seed to Seed Kit</li><li><span class="check">✓</span> 100% Chemical-Free Natural Farming</li><li><span class="check">✓</span> Integrated Pest Management (Natural)</li><li><span class="check">✓</span> Trap Crops</li></ul>
+    
+      </details>
+</div>
+  </section>
+
+
+  <section class="card" id="cropTiles">
+    <div class="section">
+      <details open class="collapsible">
+        <summary>Crop Tiles</summary>
+      
+      <div class="tableWrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Crop</th>
+              <th>Area (acres)</th>
+              <th>Practices Applied (full form)</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Rabi Dry Sowing</td><td>1.50</td><td>Beejamrutham (Seed Treatment), Rabi Dry Sowing, Bio Agents (Biological Inputs), Drava Jeevamrutham Application, Seed to Seed Kit, 100% Chemical-Free Natural Farming, Integrated Pest Management (Natural), Trap Crops</td><td><a class="badgeLink" href="https://www.google.com/maps?q=18.19243621826172,83.25859832763672" target="_blank" rel="noopener">Open map</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    
+      </details>
+</div>
+  </section>
+
+  <div style="text-align:center;color:var(--muted);font-size:11px;margin-top:12px">Generated on 2026-01-16 • APCNF Farmer Profiles</div>
+
+</div>
+</body>
+</html>
